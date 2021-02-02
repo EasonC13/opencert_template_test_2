@@ -40,6 +40,7 @@ export const CustomTemplate: FunctionComponent<TemplateProps<CustomTemplateCerti
         <h3>Award to</h3>
         <h2>{document.name}</h2>
         <br></br>
+        <h3>Time: {document?.foo?.time ??  "Default Time"}</h3>
         <h3>By {document.issuers[0].name}</h3>
       </div>
     </div>

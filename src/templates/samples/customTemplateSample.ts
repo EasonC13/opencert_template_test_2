@@ -5,6 +5,7 @@ export interface CustomTemplateCertificate extends v2.OpenAttestationDocument {
   institute: string;
   foo?: {
     title: string;
+    time: string;
   };
 }
 
@@ -22,6 +23,7 @@ export const customTemplateCertificate: CustomTemplateCertificate = {
     url: "http://localhost:3000"
   },
   foo: {
-    title: "Bar is awesome"
+    title: "The Best Inernship",
+    time: "2020 Summer"
   }
 };
