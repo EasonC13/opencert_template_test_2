@@ -13,9 +13,12 @@ const style = css`
 
 
 const containerStyle = css`
+  background-position: center center;
+  background-size: cover;
   background-image: url('https://i.imgur.com/EjypxQN.png');
   //background-image: url('https://i.imgur.com/iOjXS2p.png');
   //background-color: #324353;
+  border: 10px solid rgb(50, 67, 83);
   color: black;
   padding: 15px;
   margin: auto;
@@ -29,6 +32,11 @@ const titleCss = css`
   color: rgb(175, 149, 58)
 `
 
+const removeUnderLine = css`
+  text-decoration: none;
+  color: black;
+`
+
 export const CustomTemplate: FunctionComponent<TemplateProps<CustomTemplateCertificate> & { className?: string }> = ({
   document,
   className = ""
@@ -36,13 +44,16 @@ export const CustomTemplate: FunctionComponent<TemplateProps<CustomTemplateCerti
   return (
     <div css={containerStyle} className={className} id="custom-template">
       <div>
-        <h1 css={titleCss}>{document?.foo?.title ??  "Default title"}</h1>
+        <h1 css={titleCss}>{document?.info?.title ??  "Default title"}</h1>
         <h3>Award to</h3>
-        <h2>{document.name}</h2>
+        <h1>{document.name}</h1>
         <br></br>
-        <h3>Time: {document?.foo?.time ??  "Default Time"}</h3>
-        <h3>By {document.issuers[0].name}</h3>
+        <h3>Issue Time: {document?.info?.time ??  "Default Time"}</h3>
+        <h3><a css={removeUnderLine} href="https://fio.one" target="_blank" >By {document.issuers[0].name}</a></h3>
       </div>
     </div>
   );
 };
+
+
+
