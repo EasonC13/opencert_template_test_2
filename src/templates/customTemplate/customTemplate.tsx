@@ -19,6 +19,7 @@ const containerStyle = css`
   //background-image: url('https://i.imgur.com/iOjXS2p.png');
   //background-color: #324353;
   border: 10px solid rgb(50, 67, 83);
+  max-width: 800px;
   color: black;
   padding: 15px;
   margin: auto;
