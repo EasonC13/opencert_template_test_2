@@ -36,7 +36,7 @@ export const CustomTemplate: FunctionComponent<TemplateProps<CustomTemplateCerti
   return (
     <div css={containerStyle} className={className} id="custom-template">
       <div>
-        <h1>{document?.foo?.title ??  "Default title"}</h1>
+        <h1 css={titleCss}>{document?.foo?.title ??  "Default title"}</h1>
         <h3>Award to</h3>
         <h2>{document.name}</h2>
         <br></br>
