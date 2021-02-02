@@ -13,7 +13,7 @@ describe("customTemplate", () => {
   });
   it("should render with default title", () => {
     const { queryByText } = render(
-      <CustomTemplate document={{ ...customTemplateCertificate, foo: undefined }} handleObfuscation={() => void 0} />
+      <CustomTemplate document={{ ...customTemplateCertificate}} handleObfuscation={() => void 0} />
     );
     // eslint-disable-next-line jest/no-truthy-falsy
     expect(queryByText("Default title")).toBeTruthy();
