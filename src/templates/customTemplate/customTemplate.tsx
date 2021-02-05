@@ -49,7 +49,7 @@ export const CustomTemplate: FunctionComponent<TemplateProps<CustomTemplateCerti
         <h3>Award to</h3>
         <h1>{document.name}</h1>
         <br></br>
-        <h3>Issue Time: {document?.info?.time ??  "Default Time"}</h3>
+        <h3>Time: {document?.info?.time ??  "Default Time"}</h3>
         <h3><a css={removeUnderLine} href="https://fio.one" target="_blank" >By {document.issuers[0].name}</a></h3>
       </div>
     </div>
